@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <p>Por favor responda todas essas perguntas</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">Digite seu nome: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Digite seu sobrenome: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Digite seu E-mail: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crie uma nova senha: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Mande uma foto: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Coloque sua idade: <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">Como ficou sabendo de nós?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Instagram</option>
+            <option value="2">Youtube</option>
+            <option value="3">Google</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Fala sobre você:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Eu gosto "></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Eu aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">Termos e condições</a>
+      </label>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
